@@ -1,12 +1,12 @@
-
+import { NotificationPanel } from "./components/NotificationPanel";
 
 function App() {
 
-  return (
-    <div>
-      
-    </div>
-  )
+    return (
+        <div>
+            <NotificationPanel />
+        </div>
+    )
 }
 
 export default App
