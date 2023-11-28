@@ -7,6 +7,7 @@ This single page app serves as a requirement to apply for the post of a Mid-leve
 The page was created with the following frameworks/libraries:
 
 - React
+- TypeScript
 - Chakra UI
 
 ## Preview URL
