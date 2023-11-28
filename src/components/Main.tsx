@@ -1,5 +1,5 @@
-import { Box, Text, Heading, Icon, HStack, Tabs, Tab, TabList, TabPanel, TabPanels, TabIndicator, CircularProgress, CircularProgressLabel, Stack, VStack, StackProps, Flex } from "@chakra-ui/react";
-import { NairaIcon, FoodDrinkIcon, SavingsIcon } from "../icons/Icons";
+import { Box, Text, Heading, Icon, HStack, Tabs, Tab, TabList, TabPanel, TabPanels, TabIndicator, CircularProgress, CircularProgressLabel, Stack, VStack, StackProps, Flex, Menu, MenuButton, MenuList, MenuItem, IconButton } from "@chakra-ui/react";
+import { NairaIcon, FoodDrinkIcon, SavingsIcon, EllipsisIcon } from "../icons/Icons";
 
 interface ProgressType extends StackProps {
     size: string,
@@ -91,9 +91,27 @@ export const Main = () => {
                             _selected={{ color: '#0466C8' }}
                         >This Month</Tab>
 
+                        <Menu>
+                            <MenuButton
+                                as={IconButton}
+                                aria-label='Options'
+                                icon={<EllipsisIcon />}
+                                variant='ghost'
+                                ml='auto'
+                            />
+                            <MenuList>
+                                <MenuItem icon={<NairaIcon />}>
+                                    Expense overview
+                                </MenuItem>
+                                <MenuItem icon={<NairaIcon />}>
+                                    Category overview
+                                </MenuItem>
+                            </MenuList>
+                        </Menu>
+
                     </TabList>
                     <TabIndicator
-                        mt="-1.5px"                      
+                        mt="-1.5px"
                         position='relative'
                         _after={{
                             content: "''",
