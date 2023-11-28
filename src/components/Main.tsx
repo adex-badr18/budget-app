@@ -104,7 +104,7 @@ export const Main = () => {
             <Box>
                 <Heading color='#001233' fontSize='xl' fontWeight='medium' lineHeight='base' mx='7' mb='2.5'>Category Breakdown</Heading>
 
-                <Stack as='ul' px='7' py='5' bg='#FCFEFF' boxShadow='0px 5px 10px 2px rgba(0, 0, 0, 0.03)' borderRadius='lg' spacing='5'>
+                <Stack as='ul' px='7' py='5' mx='1.5px' bg='#FCFEFF' boxShadow='0px 5px 10px 2px rgba(0, 0, 0, 0.03)' borderRadius='lg' spacing='5'>
                     <BreakdownItem spent={20000} budget={42000} title="Food and Drink">
                         <Progress size='50px' thickness='5px' trackColor="#F4E9CD" color="#C89104" value={Math.ceil((20000/42000)*100)}>
                             <Flex justify='center' align='center' boxSize='40px' ml='4px' bg='#F4E9CD' borderRadius='full' >
