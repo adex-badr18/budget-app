@@ -12,11 +12,11 @@ export const NotificationPanel = () => {
     }, []);
 
   return (
-    <Box px={'5'} py={'3.5'}>
+    <Box px={'7'} py={'3.5'}>
         <Flex align='center' justify='space-between'>
             <Text fontSize={'md'} fontWeight={'semibold'}>{`${date.getHours()}:${date.getMinutes()}`}</Text>
 
-            <Stack direction='row'>
+            <Stack direction='row' spacing={'1.5'}>
                 <Icon as={NetworkIcon} />
                 <Icon as={WifiIcon} />
                 <Icon as={BatteryIcon} />
