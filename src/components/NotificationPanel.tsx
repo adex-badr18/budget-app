@@ -14,7 +14,7 @@ export const NotificationPanel = () => {
   return (
     <Box px={'7'} py={'3.5'}>
         <Flex align='center' justify='space-between'>
-            <Text fontSize={'md'} fontWeight={'semibold'}>{`${date.getHours()}:${date.getMinutes()}`}</Text>
+            <Text fontSize={'md'} fontWeight={'semibold'}>{`${('0' + date.getHours()).slice(-2)}:${('0' + date.getMinutes()).slice(-2)}`}</Text>
 
             <Stack direction='row' spacing={'1.5'}>
                 <Icon as={NetworkIcon} />

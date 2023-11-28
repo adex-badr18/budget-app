@@ -80,15 +80,31 @@ export const Main = () => {
 
                 <Tabs position="relative" variant="unstyled" defaultIndex={1}>
                     <TabList>
-                        <Tab>Last Month</Tab>
-                        <Tab>This Month</Tab>
+                        <Tab
+                            color='#707480'
+                            fontWeight='medium'
+                            _selected={{ color: '#0466C8' }}
+                        >Last Month</Tab>
+                        <Tab
+                            color='#707480'
+                            fontWeight='medium'
+                            _selected={{ color: '#0466C8' }}
+                        >This Month</Tab>
 
                     </TabList>
                     <TabIndicator
-                        mt="-1.5px"
-                        height="2px"
-                        bg="blue.500"
-                        borderRadius="1px"
+                        mt="-1.5px"                      
+                        position='relative'
+                        _after={{
+                            content: "''",
+                            position: "absolute",
+                            height: "3px",
+                            background: "#0466C8",
+                            top: "100%",
+                            width: "40%",
+                            left: "35%",
+                            transform: "translateX(-50%)"
+                        }}
                     />
                     <TabPanels>
                         <TabPanel>
@@ -106,21 +122,21 @@ export const Main = () => {
 
                 <Stack as='ul' px='7' py='5' mx='1.5px' bg='#FCFEFF' boxShadow='0px 5px 10px 2px rgba(0, 0, 0, 0.03)' borderRadius='lg' spacing='5'>
                     <BreakdownItem spent={20000} budget={42000} title="Food and Drink">
-                        <Progress size='50px' thickness='5px' trackColor="#F4E9CD" color="#C89104" value={Math.ceil((20000/42000)*100)}>
+                        <Progress size='50px' thickness='5px' trackColor="#F4E9CD" color="#C89104" value={Math.ceil((20000 / 42000) * 100)}>
                             <Flex justify='center' align='center' boxSize='40px' ml='4px' bg='#F4E9CD' borderRadius='full' >
-                            <Icon as={FoodDrinkIcon} />
+                                <Icon as={FoodDrinkIcon} />
                             </Flex>
                         </Progress>
                     </BreakdownItem>
 
                     <BreakdownItem spent={10000} budget={24000} title="Savings">
-                        <Progress size='50px' thickness='5px' trackColor="rgba(3, 138, 57, 0.2)" color="#038A39" value={Math.ceil((10000/24000)*100)}>
+                        <Progress size='50px' thickness='5px' trackColor="rgba(3, 138, 57, 0.2)" color="#038A39" value={Math.ceil((10000 / 24000) * 100)}>
                             <Flex justify='center' align='center' boxSize='40px' ml='4px' bg='rgba(3, 138, 57, 0.2)' borderRadius='full' >
-                            <Icon as={SavingsIcon} />
+                                <Icon as={SavingsIcon} />
                             </Flex>
                         </Progress>
                     </BreakdownItem>
-                    
+
                 </Stack>
             </Box>
         </Box>
